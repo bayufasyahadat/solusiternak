@@ -6261,6 +6261,7 @@ h6 {
   margin-bottom: 10px;
   color: #777777;
   font-size: 15px;
+  width: 400px;
 }
 
 /* line 1391, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_blog.scss */
@@ -6654,6 +6655,12 @@ h6 {
 .blog_part .single-home-blog .card ul li span {
   margin-right: 10px;
   font-size: 12px;
+}
+
+.select-balasan{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 /*# sourceMappingURL=style.css.map */
