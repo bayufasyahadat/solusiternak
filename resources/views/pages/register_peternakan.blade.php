@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register Peternakan') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{url('/simpan_peternakan')}}">
+                    <form method="POST" action="{{ route('simpan_peternakan') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -56,9 +56,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+                                <input type="submit" class="btn btn-primary" value="Register">
                             </div>
                         </div>
                     </form>

@@ -19,7 +19,6 @@ class PeternakanController extends Controller
             'nama_peternakan' => 'required',
             'jenis_hewan_ternak' => 'required',
             'jumlah_hewan_ternak' => 'required',
-            'peternak_id' => 'required|unique:peternakan',
         ));
 
         Peternakan::create([

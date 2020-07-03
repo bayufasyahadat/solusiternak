@@ -25,7 +25,7 @@ Route::get('/profil_penyuluh/{id}', 'HomeController@profilPenyuluh');
 Route::get('/profil_peternak/{id}', 'HomeController@profilPeternak');
 Route::get('/register_peternakan', 'HomeController@registerPeternakan');
 
-Route::post('/simpan_peternakan', 'PeternakanController@simpanPeternakan');
+Route::post('/simpan_peternakan', [ 'as' => 'simpan_peternakan', 'uses' => 'PeternakanController@simpanPeternakan']);
 
 Route::get('/tips', 'HomeController@tips');
 Route::get('/detail_tips/{id}', 'HomeController@detailTips');
