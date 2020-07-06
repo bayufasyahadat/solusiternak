@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Session;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -29,7 +31,16 @@ class HomeController extends Controller
 
     public function konsultasi()
     {
-        return view('pages.konsultasi');
+        $semua_keluhan = DB::table('keluhan')
+            ->join('users', 'users.id', '=', 'keluhan.peternak_id')
+            ->select('keluhan.*', 'users.name')
+            ->where('peternak_id', Auth::user()->id)
+            ->get();
+        // $manage_keluhan = view('penyuluh.keluhan-peternak')
+        //     ->with('semua_keluhan', $semua_keluhan);
+
+        return view('pages.konsultasi')
+            ->with('semua_keluhan', $semua_keluhan);
     }
 
     public function penyuluh()
